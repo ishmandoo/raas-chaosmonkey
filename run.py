@@ -7,16 +7,10 @@ import time
 env = gym.make('raaspendulum-v0')
 env.reset()
 obs = []
-for i in range(50):
-    print("Step {}: moving forward".format(i))
-    observation, reward, done, info = env.step([1])
-    print("\tObs: {}\tRew: {}".format(observation, reward))
-    time.sleep(0.01)
-    obs.append(observation)
+import urllib.request
 
-for i in range(50):
-    print("Step {}: moving backwards".format(i))
-    observation, reward, done, info = env.step([-1])
-    print("\tObs: {}\tRew: {}".format(observation, reward))
-    time.sleep(0.01)
-    obs.append(observation)
+print('Beginning file download with urllib2...')
+
+url = 'http://i3.ytimg.com/vi/J---aiyznGQ/mqdefault.jpg'
+cat = urllib.request.urlretrieve(url, 'cat.jpg')
+print(cat[1])
