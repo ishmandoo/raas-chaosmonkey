@@ -9,13 +9,10 @@ env = gym.make("raaspendulum-v0")
 env.reset()
 obs = []
 
-print("Beginning ping test to google...")
-try:
-    system("ping -c 1 www.google.com")
-except:
-    print("Ping test has failed. Moving on.")
+print("\nBeginning ping test to google...")
+system("ping -c 1 www.google.com")
 
-print("Beginning download with google html response wtih urlopen")
+print("\nBeginning download with google html response wtih urlopen")
 try:
     response = urllib.request.urlopen("http://www.google.com/")
     html = response.read()
@@ -24,7 +21,7 @@ except:
     print("Download has failed using `urlopen`. Moving on.")
 
 
-print("Beginning file download with urlretrieve")
+print("\nBeginning file download with urlretrieve")
 try:
     url = "http://i3.ytimg.com/vi/J---aiyznGQ/mqdefault.jpg"
     cat = urllib.request.urlretrieve(url)
