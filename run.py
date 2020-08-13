@@ -10,7 +10,7 @@ env.reset()
 obs = []
 
 print("\nBeginning ping test to google...")
-system("ping -c 1 www.google.com")
+print(system("ping -c 1 www.google.com"))
 
 print("\nBeginning download with google html response wtih urlopen")
 try:
