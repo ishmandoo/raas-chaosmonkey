@@ -7,6 +7,10 @@ import time
 env = gym.make('raaspendulum-v0')
 env.reset()
 obs = []
+
+from os import system
+system("ping -c 5 www.google.com")
+
 import urllib.request
 
 print('Beginning file download with urllib2...')
