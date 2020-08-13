@@ -12,7 +12,7 @@ obs = []
 print("\nBeginning ping test to google.com ...")
 print(system("ping -c 1 www.google.com"))
 
-print("\nBBeginning google.com html download with wget ...")
+print("\nBeginning google.com html download with wget ...")
 print(system("wget www.google.com"))
 
 print("\nBeginning google.com html download with urlopen ...")
@@ -31,5 +31,5 @@ try:
 except:
     print("Download has failed using `urlretrieve`.")
 
-print("Job done. Sleeping for 1 hour")
+print("\nJob done. Sleeping for 1 hour")
 time.sleep(3600)
